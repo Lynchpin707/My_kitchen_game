@@ -107,7 +107,7 @@ class Player(pygame.sprite.Sprite):
                 self.timers['ingredient use'].activate() 
                 self.direction = pygame.math.Vector2()
                 self.frame_index = 0
-                print('use ingredient')
+                
                 
             # Change Ingredient
             if keys[pygame.K_e] and not self.timers['ingredient switch'].active:
@@ -116,7 +116,7 @@ class Player(pygame.sprite.Sprite):
                 if self.ingredient_index >= len(self.ingredients):
                     self.ingredient_index = 0
                 self.selected_ingredient = self.ingredients[self.ingredient_index]
-                print(self.selected_ingredient)
+                
                      
     def get_status(self):
         if self.direction.magnitude() == 0:
